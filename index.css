@@ -1,3 +1,10 @@
-html {
-    background-color: blue;
+body {
+    background-color: black;
+}
+
+.draw {
+    position: fixed;
+    left: 0;
+    top: 0;
+    outline: none;
 }
