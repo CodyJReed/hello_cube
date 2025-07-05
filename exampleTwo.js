@@ -26,11 +26,18 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setSize(aspect.width, aspect.height)
 
+// Clock
+const clock = new THREE.Clock()
 
 function animate() {
-    mesh.rotation.y += 0.01
-    mesh.rotation.x += 0.01
+    const elapsedTime = clock.getElapsedTime()
+    // Update rotation on Y-Axis
+    mesh.rotation.y = elapsedTime
+    // Update rotation on X-Axis
+    mesh.rotation.x = elapsedTime
+    // Renderer
     renderer.render(scene, camera)
+    // RequestAnimationFrame
     window.requestAnimationFrame(animate)
 }
 
