@@ -2,8 +2,15 @@ import * as THREE from 'three'
 
 const scene = new THREE.Scene()
 
-const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ color: "purple" })
+const geometry = new THREE.PlaneGeometry(1, 1)
+// const geometry = new THREE.BufferGeometry()
+// const vertices = new Float32Array([
+//     0,0,0,
+//     0,1,0,
+//     1,0,0
+// ])
+// geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3))
+const material = new THREE.MeshBasicMaterial({ color: "purple", wireframe: true })
 const mesh = new THREE.Mesh(geometry, material)
 
 scene.add(mesh)
